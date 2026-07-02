@@ -11,9 +11,7 @@ const profileBodySchema = z.object({
         .string({ required_error: 'Name is required', invalid_type_error: 'Name must be a string' })
         .min(2, 'Name must be at least 2 characters long')
         .max(100, 'Name must not exceed 100 characters'),
-    contact: z
-        .string({ required_error: 'Contact is required', invalid_type_error: 'Contact must be a string' })
-        .regex(/^[0-9]{10,}$/, 'Contact must be a valid phone number (at least 10 digits)'),
+        
     age: z
         .number({ required_error: 'Age is required', invalid_type_error: 'Age must be a number' })
         .int('Age must be an integer')
