@@ -14,6 +14,7 @@ const initialProfile = {
     college: "",
     location: "",
     skills: "",
+    about: ""
 };
 
 function StudentProfile() {
@@ -40,6 +41,7 @@ function StudentProfile() {
                     college: current.college || "",
                     location: current.location || "",
                     skills: (current.skills || []).join(", "),
+                    about: current.about || ""
                 });
                 setStatus("idle");
             } catch (error) {
@@ -71,6 +73,7 @@ function StudentProfile() {
             college: profile.college,
             location: profile.location,
             skills: profile.skills.split(",").map((skill) => skill.trim()).filter(Boolean),
+            about: profile.about
         };
 
         try {
@@ -130,6 +133,11 @@ function StudentProfile() {
                         <label className="block text-sm font-medium text-gray-700">
                             Name
                             <input name="name" value={profile.name} onChange={updateField} required className="mt-1 h-10 w-full rounded-lg border border-gray-300 px-3" />
+                        </label>
+
+                        <label className="block text-sm font-medium text-gray-700 md:col-span-2">
+                            About
+                            <textarea name="about" value={profile.about} onChange={updateField} placeholder="Tell us about yourself..." className="mt-1 h-100 w-full rounded-lg border border-gray-300 px-3" />
                         </label>
 
                         <label className="block text-sm font-medium text-gray-700">
