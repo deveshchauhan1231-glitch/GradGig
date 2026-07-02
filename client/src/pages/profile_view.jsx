@@ -35,7 +35,10 @@ function ProfileViewDetailed() {
             setError("");
 
             try {
-                const data = await apiFetch(`/profile/view?id=${encodeURIComponent(profileId),getToken}`);
+                const data = await authFetch(
+                    `/profile/view?id=${encodeURIComponent(profileId)}`,
+                    getToken
+                );
                 setProfile(data.profile);
                 setStatus("ready");
             } catch (err) {
