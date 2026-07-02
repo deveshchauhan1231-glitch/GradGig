@@ -142,7 +142,7 @@ function StudentProfile() {
 
                         <label className="block text-sm font-medium text-gray-700">
                             Contact
-                            <input name="contact" value={profile.contact} onChange={updateField} required className="mt-1 h-10 w-full rounded-lg border border-gray-300 px-3" />
+                            <input name="contact" value={profile.contact} onChange={updateField} className="mt-1 h-10 w-full rounded-lg border border-gray-300 px-3" />
                         </label>
 
                         <label className="block text-sm font-medium text-gray-700">
