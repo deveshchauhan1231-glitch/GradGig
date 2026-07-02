@@ -6,8 +6,24 @@ import {
   SignUpButton,
   UserButton,
   useAuth,
+  useUser
 } from "@clerk/react";
 import { authFetch } from "../lib/api";
+
+
+function Pp() {
+  const { user } = useUser();
+
+  return (
+    <img
+      src={user?.imageUrl}
+      alt="Profile"
+      className="w-8 h-8 rounded-full"
+    />
+  );
+}
+
+
 
 function Navbar() {
   const location = useLocation();
@@ -168,7 +184,8 @@ function Navbar() {
             </Show>
 
             <Show when="signed-in">
-              <UserButton />
+              {/* <UserButton /> */}
+              <Link to="student-profile"><Pp /></Link>
 
               <Link
                 to="/history"
@@ -278,6 +295,7 @@ function Navbar() {
             </Link>
 
             <Show when="signed-in">
+              <Link to="student-profile"><Pp /></Link>
               <Link
                 to="/history"
                 onClick={() => setMobileOpen(false)}
