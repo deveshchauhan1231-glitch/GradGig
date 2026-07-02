@@ -185,7 +185,7 @@ function Navbar() {
 
             <Show when="signed-in">
               {/* <UserButton /> */}
-              <Link to="student-profile"><Pp /></Link>
+              <Link to="/student-profile"><Pp /></Link>
 
               <Link
                 to="/history"
@@ -295,7 +295,7 @@ function Navbar() {
             </Link>
 
             <Show when="signed-in">
-              <Link to="student-profile"><Pp /></Link>
+              <Link to="/student-profile"><Pp /></Link>
               <Link
                 to="/history"
                 onClick={() => setMobileOpen(false)}
