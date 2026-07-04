@@ -173,4 +173,4 @@ GNU general public license v3
 
 ---
 
-Built solo by [Devesh](https://github.com/<your-username>) as a full-stack + ML project.
+Built solo by Devesh as a full-stack project
