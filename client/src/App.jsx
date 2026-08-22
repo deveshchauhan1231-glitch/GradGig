@@ -17,10 +17,12 @@ import ContractHistory from "./pages/contractHistory"
 import HistoryDetail from "./pages/historyDetail"
 import ChatPage from "./pages/chatPage"
 import ProfileViewDetailed from "./pages/profile_view"
+import ChatBot from "./components/ChatBot";
 
 
 function App() {
   return (
+    <>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -41,7 +43,10 @@ function App() {
       <Route path="/profile-view/:id" element={<ProfileViewDetailed />} />
 
       <Route path="*" element={<NotFound />} />
+      
     </Routes>
+    <ChatBot />
+    </>
   )
 }
 
